@@ -7,7 +7,7 @@ import perfil from '../assets/img/Perfil.webp'
 
 export default function Home() {
   return (
-    <div className='flex flex-1 flex-col items-center justify-center bg-zinc-50 font-sans dark:bg-black'>
+    <div className='relative flex flex-1 flex-col items-center justify-center'>
       <main className='flex w-full'>
         <Container isFluid>
           <div className='flex flex-col items-center justify-center'>
