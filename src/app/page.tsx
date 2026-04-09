@@ -1,28 +1,81 @@
+import { Icon } from '@iconify/react'
+import { Audiowide, Rubik_Glitch } from 'next/font/google'
 import Image from 'next/image'
 
+import { BorderBeam } from '@/components/ui/BorderBeam'
+import MeshText from '@/components/ui/MeshText'
 import SocialLink from '@/components/ui/SocialLink'
 import Container from '@/container/Container'
+import { cn } from '@/utils/cn'
 
 import perfil from '../assets/img/Perfil.webp'
+
+const rubikGlitch = Rubik_Glitch({
+  variable: '--font-rubik-glitch',
+  subsets: ['latin'],
+  weight: ['400'],
+})
+
+const audiowide = Audiowide({
+  variable: '--font-audiowide',
+  subsets: ['latin'],
+  weight: ['400'],
+})
 
 export default function Home() {
   return (
     <div className='relative flex flex-1 flex-col items-center justify-center'>
-      <main className='flex w-full'>
-        <Container isFluid>
-          <div className='flex flex-col items-center justify-center'>
-            <div className='flex w-full flex-col items-center justify-center'>
+      <main className='flex w-full overflow-hidden'>
+        <Container isFluid className='flex flex-1 flex-col items-center justify-center'>
+          <div className='relative flex w-130 flex-col items-center justify-center rounded-2xl border border-white/30 bg-black/8 p-8 text-center shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-xs'>
+            <BorderBeam duration={6} size={400} className='from-transparent via-[#ff2ed1] to-transparent' />
+            <BorderBeam
+              duration={6}
+              delay={3}
+              size={400}
+              borderWidth={2}
+              className='from-transparent via-[#00f5ff] to-transparent'
+            />
+            <div className='flex flex-col items-center justify-center gap-2'>
               <figure className='h-20 w-20 overflow-hidden rounded-full'>
                 <Image src={perfil} alt='Foto de perfil de Lucino Campos' />
               </figure>
+              <MeshText
+                as='h1'
+                className={cn(rubikGlitch.className, 'text-4xl uppercase')}
+                points={[
+                  { color: '#00ffff', x: 54, y: 26, spread: 5, opacity: 0.9 }, // ciano
+                  { color: '#39ff14', x: 73, y: 49, spread: 5, opacity: 0.8 }, // verde
+                  { color: '#0080ff', x: 37, y: 72, spread: 5, opacity: 0.7 }, // amarelo
+                  { color: '#ff0080', x: 90, y: 34, spread: 5, opacity: 0.8 }, // laranja
+                  { color: '#ff00ff', x: 47, y: 55, spread: 5, opacity: 0.9 }, // magenta
+                  { color: '#8000ff', x: 10, y: 28, spread: 5, opacity: 0.9 }, // roxo
+                ]}
+                background='#fff'
+              >
+                Lucino Campos
+              </MeshText>
 
-              <h1>Lucino Campos</h1>
-
-              <p>Desenvolvedor Web | React | TypeScript | Next.js | Tailwind CSS</p>
+              <MeshText
+                as='p'
+                className={cn(audiowide.className, 'text-lg')}
+                points={[
+                  { color: '#ffffff', x: 50, y: 0, spread: 90, opacity: 0.9 },
+                  { color: '#00f5ff', x: 50, y: 0, spread: 50, opacity: 0.3 },
+                ]}
+              >
+                Desenvolvedor Web
+              </MeshText>
+              <div className='mt-4 flex items-center justify-center gap-4'>
+                <Icon icon='devicon:react' width='28' height='28' />
+                <Icon icon='devicon:nextjs' width='28' height='28' />
+                <Icon icon='devicon:typescript' width='28' height='28' />
+                <Icon icon='devicon:tailwindcss' width='28' height='28' />
+              </div>
             </div>
 
-            <div className='mt-6 flex w-full items-center justify-center'>
-              <ul className='flex w-full flex-col items-center justify-center gap-4'>
+            <div className='mt-6 flex items-center justify-center'>
+              <ul className='flex w-full flex-col items-start justify-center gap-4'>
                 <SocialLink socialMedia='GitHub' icon='mdi:github' src='https://github.com/Alucinado-dev' />
                 <SocialLink
                   socialMedia='LinkedIn'
