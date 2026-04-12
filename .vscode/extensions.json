@@ -1,0 +1,26 @@
+{
+  "recommendations": [
+    // Linter e Formatter
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+
+    // Next.js / React
+    "dsznajder.es7-react-js-snippets", // snippets rfc, rafce, etc.
+
+    // Tailwind
+    "bradlc.vscode-tailwindcss", // autocomplete de classes Tailwind
+
+    // Qualidade de vida
+    "streetsidesoftware.code-spell-checker",
+    "streetsidesoftware.code-spell-checker-portuguese-brazilian",
+    "aaron-bond.better-comments",
+    "formulahendry.code-runner",
+    "eamodio.gitlens",
+    "usernamehw.errorlens",
+
+    // Utilidades
+    "christian-kohler.path-intellisense", // autocomplete de paths de import
+    "mikestead.dotenv", // syntax highlight no .env
+    "pkief.material-icon-theme" // você já usa o tema no settings
+  ]
+}
