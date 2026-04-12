@@ -153,7 +153,7 @@ export default function Home() {
                   icon='skill-icons:instagram'
                   src='https://www.instagram.com/lucino_de_campos/'
                 />
-                <SocialLink socialMedia='Email' icon='logos:google-gmail' src='lucinogabriel1510@gmail.com' />
+                <SocialLink socialMedia='Email' icon='logos:google-gmail' src='mailto:lucinogabriel1510@gmail.com' />
               </motion.ul>
             </div>
           </div>
