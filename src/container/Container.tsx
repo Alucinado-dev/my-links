@@ -1,4 +1,4 @@
-import { cn } from '../utils/cn.ts'
+import { cn } from '../utils/cn'
 
 type ContainerProps = {
   children: React.ReactNode
