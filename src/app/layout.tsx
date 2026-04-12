@@ -2,6 +2,7 @@ import './globals.css'
 
 import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
+import Script from 'next/script'
 
 import Background from '@/components/backgrounds/background'
 
@@ -101,6 +102,12 @@ export default function RootLayout({
       <body className='relative flex min-h-full flex-col'>
         <Background />
         {children}
+        <Script
+          src='https://cdn.counter.dev/script.js'
+          data-id='33f78ff6-536a-45bc-92b9-1b262ec69e8d'
+          data-utcoffset='-3'
+          strategy='afterInteractive'
+        />
       </body>
     </html>
   )
