@@ -48,13 +48,18 @@ export default function Home() {
     <div className='relative flex flex-1 flex-col items-center justify-center'>
       <main className='flex w-full overflow-hidden'>
         <Container isFluid className='flex flex-1 flex-col items-center justify-center'>
-          <div className='relative flex w-130 flex-col items-center justify-center rounded-2xl border border-white/30 bg-black/50 p-8 text-center shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),0_50px_100px_-20px_rgba(50,50,93,0.25),0_30px_60px_-30px_rgba(0,0,0,0.3)] backdrop-blur-xs'>
-            <BorderBeam duration={6} size={400} className='from-transparent via-[#ff2ed1] to-transparent' />
+          <div className='relative flex w-70 flex-col items-center justify-center rounded-2xl border border-white/30 bg-black/50 p-8 text-center shadow-[inset_0_1px_1px_rgba(255,255,255,0.1),0_50px_100px_-20px_rgba(50,50,93,0.25),0_30px_60px_-30px_rgba(0,0,0,0.3)] backdrop-blur-xs sm:w-110'>
+            <BorderBeam
+              duration={6}
+              borderWidth={3}
+              size={400}
+              className='from-transparent via-[#ff2ed1] to-transparent'
+            />
             <BorderBeam
               duration={6}
               delay={3}
               size={400}
-              borderWidth={5}
+              borderWidth={3}
               className='from-transparent via-[#00f5ff] to-transparent'
             />
             <div className='flex flex-col items-center justify-center gap-2'>
