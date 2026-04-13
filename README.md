@@ -274,7 +274,7 @@ Em `src/app/page.tsx`, altere as props de `MeshText`:
 
 ## 📁 Estrutura do Projeto
 
-```
+```txt
 src/
 ├── app/
 │   ├── globals.css          # Estilos globais
@@ -351,4 +351,4 @@ Sinta-se livre para fazer fork, criar issues e submeter pull requests com melhor
 
 ---
 
-**Desenvolvido com ❤️ usando Next.js, React e Motion**
+**Desenvolvido com ❤️ usando Next.js**
