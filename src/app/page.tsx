@@ -2,7 +2,7 @@
 
 import { Icon } from '@iconify/react'
 import { easeInOut, motion } from 'motion/react'
-import { Audiowide, Rubik_Glitch } from 'next/font/google'
+import { Audiowide, Rubik_Glitch, VT323 } from 'next/font/google'
 import Image from 'next/image'
 
 import { BorderBeam } from '@/components/ui/BorderBeam'
@@ -23,6 +23,12 @@ const audiowide = Audiowide({
   variable: '--font-audiowide',
   subsets: ['latin'],
   weight: ['400'],
+})
+
+const Vt323 = VT323({
+  variable: '--font-vt3230',
+  weight: '400',
+  subsets: ['latin'],
 })
 
 const containerVariants = {
@@ -79,14 +85,14 @@ export default function Home() {
               >
                 <MeshText
                   as='h1'
-                  className={cn(rubikGlitch.className, 'text-4xl uppercase')}
+                  className={cn(Vt323.variable, 'text-4xl uppercase')}
                   points={[
-                    { color: '#00ffff', x: 54, y: 26, spread: 5, opacity: 0.9 },
-                    { color: '#39ff14', x: 73, y: 49, spread: 5, opacity: 0.8 },
-                    { color: '#0080ff', x: 37, y: 72, spread: 5, opacity: 0.7 },
-                    { color: '#ff0080', x: 90, y: 34, spread: 5, opacity: 0.8 },
-                    { color: '#ff00ff', x: 47, y: 55, spread: 5, opacity: 0.9 },
-                    { color: '#8000ff', x: 10, y: 28, spread: 5, opacity: 0.9 },
+                    { color: '#00ffff', x: 54, y: 26, spread: 10, opacity: 0.9 },
+                    { color: '#39ff14', x: 73, y: 49, spread: 10, opacity: 0.8 },
+                    { color: '#0080ff', x: 37, y: 72, spread: 10, opacity: 0.7 },
+                    { color: '#ff0080', x: 90, y: 34, spread: 10, opacity: 0.8 },
+                    { color: '#ff00ff', x: 47, y: 55, spread: 10, opacity: 0.9 },
+                    { color: '#8000ff', x: 10, y: 28, spread: 10, opacity: 0.9 },
                   ]}
                   background='#fff'
                 >
@@ -103,8 +109,8 @@ export default function Home() {
                   as='p'
                   className={cn(audiowide.className, 'text-lg')}
                   points={[
-                    { color: '#ffffff', x: 50, y: 0, spread: 90, opacity: 0.9 },
-                    { color: '#00f5ff', x: 50, y: 0, spread: 50, opacity: 0.3 },
+                    { color: '#ffffff', x: 50, y: 0, spread: 120, opacity: 0.9 },
+                    { color: '#00f5ff', x: 50, y: 0, spread: 70, opacity: 0.6 },
                   ]}
                 >
                   Desenvolvedor Web
